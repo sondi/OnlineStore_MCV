@@ -4,7 +4,7 @@ class MainController
 		# @usuario = "Sandra"
 		# @contra = "laquesea"
 			if var[0] == "login"
-			log_in("Sandra", "nose")
+			log_in(var[1],var[2])
 		elsif var[0] == "signin"
 			p var
 			sign_in(var[1],var[2])
@@ -14,7 +14,7 @@ class MainController
 	end
 
 	def log_in(username, password)
-		first_user = User.find(1)
+		first_user = User.find_by(name: username)
 		username = first_user.name
 		pw = first_user.password
 		if password == pw
