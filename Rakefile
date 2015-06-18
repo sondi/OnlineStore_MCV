@@ -9,12 +9,12 @@ end
 
 desc "create the database"
 task "db:create" do
-  touch 'db/users.sqlite3'
+  touch 'db/chefs.sqlite3'
 end
 
 desc "drop the database"
 task "db:drop" do
-  rm_f 'db/users.sqlite3'
+  rm_f 'db/chefs.sqlite3'
 end
 
 desc "migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)."
