@@ -3,6 +3,7 @@ require 'sqlite3'
 require 'yaml'
 
 require_relative '../app/models/user'
+require_relative '../app/models/product'
 require_relative '../app/controller/main_controller'
 require_relative '../app/view/main_view'
 
