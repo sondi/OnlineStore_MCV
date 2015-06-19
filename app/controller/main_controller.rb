@@ -6,7 +6,6 @@ class MainController
 		if var[0] == "login"
 			log_in(var[1],var[2])
 		elsif var[0] == "signin"
-			p var
 			sign_in(var[1],var[2])
 		else
 			puts "command not found"
@@ -27,6 +26,7 @@ class MainController
 	def sign_in(username, password)
 		new_user = User.new(name: username, password: password)
 		new_user.save
+		@view.succesful_signin
 	end
 end
 
