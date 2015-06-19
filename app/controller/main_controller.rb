@@ -3,7 +3,7 @@ class MainController
 		@view = MainView.new
 		# @usuario = "Sandra"
 		# @contra = "laquesea"
-			if var[0] == "login"
+		if var[0] == "login"
 			log_in(var[1],var[2])
 		elsif var[0] == "signin"
 			p var
@@ -18,9 +18,9 @@ class MainController
 		username = first_user.name
 		pw = first_user.password
 		if password == pw
-			puts "Welcome!"
+			@view.welcome
 		else
-			puts "Username or Password not valid, try again"
+			@view.login_failed
 		end
 	end
 
